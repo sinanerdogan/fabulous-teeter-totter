@@ -2,7 +2,7 @@ import { objects } from "../../../constants";
 import { helpers } from "../../../utils";
 
 const mutations = {
-	generateObject({ elements }, isRandom = false) {
+	generateObject({ elements }, isRandom = false, isFalling = false) {
 		console.log(elements, isRandom);
 		const typeNumber = helpers.randomNumberGenerator(1, 3);
 		const id = helpers.randomIdGenerator();
@@ -11,8 +11,8 @@ const mutations = {
 		const color = helpers.randomColorGenerator();
 		const size = 1 + objects.SIZE_SCALE_RATIO * (weight - 1);
 		const position = 0;
-		const isDropped = true;
-		elements.push({ id, type, weight, color, size, position, isRandom, isDropped });
+		const isDropped = false;
+		elements.push({ id, type, weight, color, size, position, isRandom, isDropped, isFalling });
 		console.log({ id, type, weight, color, size, position, isRandom, isDropped });
 	}
 };
