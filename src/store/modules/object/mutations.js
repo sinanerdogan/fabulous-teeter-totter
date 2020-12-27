@@ -9,8 +9,8 @@ const mutations = {
 		const color = helpers.randomColorGenerator();
 		const size = 1 + objects.SIZE_SCALE_RATIO * (weight - 1);
 		const position = 0;
-		elements.push({ id, weight, color, size, position, isRandom });
-		console.log(id, weight, color, size, position, isRandom);
+		const isDropped = false;
+		elements.push({ id, weight, color, size, position, isRandom, isDropped });
 	}
 };
 
