@@ -15,11 +15,11 @@ function randomColorGenerator() {
 	return `${r}, ${g}, ${b}`;
 }
 
-function randomNumberGenerator() {
+function randomNumberGenerator(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-export default {
+export const helpers = {
 	randomIdGenerator,
 	randomColorGenerator,
 	randomNumberGenerator

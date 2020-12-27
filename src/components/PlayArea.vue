@@ -11,6 +11,10 @@ export default {
 	components: {
 		"drop-space": () => import("./Space"),
 		"teeter-totter": () => import("./TeeterTotter")
+	},
+	created() {
+		console.log(this.$store);
+		this.$store.commit("generateObject");
 	}
 };
 </script>

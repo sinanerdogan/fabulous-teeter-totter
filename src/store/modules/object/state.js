@@ -1,3 +1,4 @@
-export const state = {
-	objects: []
+const state = {
+	elements: []
 };
+export default state;
