@@ -1,4 +1,5 @@
 const state = {
-	elements: []
+  elements: [],
+  fallingIntervalGap: null,
 };
 export default state;
